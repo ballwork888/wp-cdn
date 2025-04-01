@@ -8,6 +8,7 @@ header#site-header {
 
 body {
     background-color: #060004;
+    margin-bottom: 60px;
 }
 
 .page-header h1 {
@@ -60,4 +61,125 @@ li {
 .custom-logo-link img {
     max-width: 100px;
     height: auto;
+}
+
+.row-button-footer {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #440139, #2b082b);
+    padding: 12px;
+}
+
+.row-button-footer a.btn-login,
+.row-button a.btn-login,
+.row-button-footer a.btn-regis,
+.row-button a.btn-regis {
+    width: 30%;
+    text-align: center;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin: 0 15px;
+    font-family: "Prompt", Sans-serif;
+    font-weight: 600;
+}
+
+a.btn-login,
+li#menu-item-250 a {
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Prompt", Sans-serif;
+    transition: 0.5s;
+    background: linear-gradient(180deg, rgba(129, 43, 118, .96) .02%, rgba(90, 10, 83, .96) 99.96%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+a.btn-login:hover {
+    background-position: right center;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+a.btn-regis,
+li#menu-item-251 a {
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Prompt", Sans-serif;
+    transition: 0.5s;
+    background: linear-gradient(180deg, #f479e0, #d20093);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.btn-glow:hover {
+    /*   box-shadow: rgba(111, 76, 255, 0.5) 0px 0px 20px 0px; */
+}
+
+a.btn-login:hover,
+li#menu-item-130 a:hover {
+    /* 		background: #61ce70;
+		color: #fff;
+		transition: 0.5s; */
+}
+
+a.btn-regis:hover,
+li#menu-item-131 a:hover {
+    /* 		background: #61ce70;
+		color: #fff;
+		box-shadow: 0 0 18px #61ce70; */
+    /*     box-shadow: unset; */
+}
+
+/* btn header menu */
+li#menu-item-130 a {
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin-right: 10px;
+}
+
+li#menu-item-131 a {
+    width: 150px;
+    display: block;
+    text-align: center;
+}
+
+.row-button {
+    display: flex;
+    justify-content: center;
+}
+
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon svg {
+    width: 0.4em;
+    height: 0.4em;
+}
+
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon {
+    width: 0.7em;
+}
+
+.elementor-accordion .elementor-tab-title {
+    padding: 6px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-title .row-button {
+        display: none;
+    }
+
+    .row-button-footer a.btn-login,
+    .row-button-footer a.btn-regis {
+        width: 40%;
+    }
+
+    .row-button a.btn-login,
+    .row-button a.btn-regis {
+        width: 50%;
+        padding: 5px;
+        margin: 3px;
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
