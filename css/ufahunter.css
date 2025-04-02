@@ -31,6 +31,19 @@ h6 {
     font-weight: 700;
 }
 
+h1 {
+    font-size: clamp(22px, 5vw, 35px);
+    /* ขนาดต่ำสุด 24px, ปรับตาม viewport, สูงสุด 48px */
+}
+
+h2 {
+    font-size: clamp(28px, 4vw, 30px);
+}
+
+h3 {
+    font-size: clamp(18px, 3vw, 25px);
+}
+
 .site-navigation ul.menu li a {
     color: #fff;
     font-family: "Prompt", sans-serif;
@@ -181,5 +194,36 @@ li#menu-item-131 a {
         margin: 3px;
         font-size: 14px;
         font-weight: 400;
+    }
+}
+
+/* Shine Effect */
+figure.wp-block-image {
+    position: relative;
+    overflow: hidden;
+    /* ป้องกันเอฟเฟกต์ล้น */
+    display: inline-block;
+}
+
+figure.wp-block-image::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    transform: skewX(-25deg);
+}
+
+figure.wp-block-image:hover::before {
+    animation: shine 0.75s ease-in-out;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
     }
 }
