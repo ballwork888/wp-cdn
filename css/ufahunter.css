@@ -222,6 +222,11 @@ figure.wp-block-image:hover::before {
     animation: shine 0.75s ease-in-out;
 }
 
+.entry-title {
+    font-family: "Prompt", Sans-serif !important;
+    line-height: normal !important;
+}
+
 @keyframes shine {
     100% {
         left: 125%;

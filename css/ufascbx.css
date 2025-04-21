@@ -45,8 +45,6 @@ h3 {
     font-size: clamp(18px, 3vw, 25px);
 }
 
-
-
 .site-navigation ul.menu li a {
     color: #fff;
     font-family: "Prompt", sans-serif;
@@ -224,6 +222,11 @@ figure.wp-block-image::before {
 
 figure.wp-block-image:hover::before {
     animation: shine 0.75s ease-in-out;
+}
+
+.entry-title {
+    font-family: "Prompt", Sans-serif !important;
+    line-height: normal !important;
 }
 
 @keyframes shine {
