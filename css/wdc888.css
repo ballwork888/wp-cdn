@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+header#site-header {
+    background: linear-gradient(180deg, #041a72, #030342);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+body {
+    background-color: #010835;
+    margin-bottom: 60px;
+}
+
+.page-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main#content {
+    min-height: 64.7vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #e5bf83;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+}
+
+
+h1 {
+    font-size: clamp(22px, 5vw, 35px);
+    /* ขนาดต่ำสุด 24px, ปรับตาม viewport, สูงสุด 48px */
+}
+
+h2 {
+    font-size: clamp(28px, 4vw, 30px);
+}
+
+h3 {
+    font-size: clamp(18px, 3vw, 25px);
+}
+
+.site-navigation ul.menu li a {
+    color: #fff;
+    font-family: "Prompt", sans-serif;
+}
+
+p,
+span,
+li {
+    color: #fff;
+}
+
+.site-footer {
+    background: linear-gradient(180deg, #041a72, #030342);
+}
+
+.site-footer .footer-inner .site-branding.show-logo {
+    margin-bottom: 10px;
+}
+
+.site-footer .footer-inner nav.site-navigation ul.menu li {
+    margin: 0 10px;
+}
+
+.site-header .header-inner ul#menu-main-menu li {
+    margin: 0 5px;
+}
+
+.custom-logo-link img {
+    max-width: 100px;
+    height: auto;
+}
+
+.row-button-footer {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, #041a72, #030342);
+    padding: 12px;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
+.row-button-footer a.btn-login,
+.row-button a.btn-login,
+.row-button-footer a.btn-regis,
+.row-button a.btn-regis {
+    width: 30%;
+    text-align: center;
+    padding: 7px 10px;
+    border-radius: 10px;
+    margin: 0 15px;
+    font-family: "Prompt", Sans-serif;
+    font-weight: 600;
+}
+
+a.btn-login,
+li#menu-item-250 a {
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Prompt", Sans-serif;
+    transition: 0.5s;
+    background: linear-gradient(180deg, #839de5, #083898);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+a.btn-login:hover,
+li#menu-item-250 a:hover {
+    animation: shake 0.4s ease;
+}
+
+
+
+a.btn-regis,
+li#menu-item-251 a {
+    border-radius: 10px;
+    color: #000000;
+    font-family: "Prompt", Sans-serif;
+    transition: 0.5s;
+    background: linear-gradient(180deg, #e5bf83, #af8239);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+a.btn-regis:hover,
+li#menu-item-251 a:hover {
+    animation: shake 0.4s ease;
+}
+
+
+
+/* btn header menu */
+li#menu-item-130 a {
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin-right: 10px;
+}
+
+li#menu-item-131 a {
+    width: 150px;
+    display: block;
+    text-align: center;
+}
+
+.row-button {
+    display: flex;
+    justify-content: center;
+}
+
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon svg {
+    width: 0.4em;
+    height: 0.4em;
+}
+
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon {
+    width: 0.7em;
+}
+
+.elementor-accordion .elementor-tab-title {
+    padding: 6px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-title .row-button {
+        display: none;
+    }
+
+    .row-button-footer a.btn-login,
+    .row-button-footer a.btn-regis {
+        width: 40%;
+    }
+
+    .row-button a.btn-login,
+    .row-button a.btn-regis {
+        width: 50%;
+        padding: 5px;
+        margin: 3px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+
+/* Shine Effect */
+figure.wp-block-image {
+    position: relative;
+    overflow: hidden;
+    /* ป้องกันเอฟเฟกต์ล้น */
+    display: inline-block;
+}
+
+figure.wp-block-image::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    transform: skewX(-25deg);
+}
+
+figure.wp-block-image:hover::before {
+    animation: shine 0.75s ease-in-out;
+}
+
+.entry-title {
+    font-family: "Prompt", Sans-serif !important;
+    line-height: normal !important;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
