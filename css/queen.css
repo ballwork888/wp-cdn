@@ -88,6 +88,22 @@ li {
     padding: 12px;
 }
 
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
 .row-button-footer a.btn-login,
 .row-button a.btn-login,
 .row-button-footer a.btn-regis,
@@ -111,10 +127,9 @@ li#menu-item-250 a {
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
 
-a.btn-login:hover {
-    background-position: right center;
-    color: #fff !important;
-    text-decoration: none;
+a.btn-login:hover,
+li#menu-item-250 a:hover {
+    animation: shake 0.4s ease;
 }
 
 a.btn-regis,
@@ -127,24 +142,11 @@ li#menu-item-251 a {
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
 
-.btn-glow:hover {
-    /*   box-shadow: rgba(111, 76, 255, 0.5) 0px 0px 20px 0px; */
-}
-
-a.btn-login:hover,
-li#menu-item-130 a:hover {
-    /* 		background: #61ce70;
-		color: #fff;
-		transition: 0.5s; */
-}
-
 a.btn-regis:hover,
-li#menu-item-131 a:hover {
-    /* 		background: #61ce70;
-		color: #fff;
-		box-shadow: 0 0 18px #61ce70; */
-    /*     box-shadow: unset; */
+li#menu-item-251 a:hover {
+    animation: shake 0.4s ease;
 }
+
 
 /* btn header menu */
 li#menu-item-130 a {
