@@ -6,7 +6,7 @@
 add_filter('wp_nav_menu_objects', 'custom_login_link_replacer', 10, 2);
 function custom_login_link_replacer($items, $args)
 {
-    $current_site = 'ufascbx'; // ← แก้ชื่อเว็บ
+    $current_site = 'queen'; // ← แก้ชื่อเว็บ
 
     $json = file_get_contents('https://cdn.jsdelivr.net/gh/ballwork888/wp-cdn@main/json/config.json');
     $config = json_decode($json, true);
